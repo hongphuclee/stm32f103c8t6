@@ -1,0 +1,14 @@
+Timer1.pbi: D:\My_Embedded\Micontroller\Stm32f10x\source\Timer1.c \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\timer1.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\LHP_stm32f103.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\gpio.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\my_rcc.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\button.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\bit.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\my_dma.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\nvic.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\systick.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\uart.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\i2c.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\lcd_i2c.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\adc.h

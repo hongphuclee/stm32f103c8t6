@@ -1,0 +1,15 @@
+"D:\D\App\IAR\arm\bin\armproc.dll" 
+
+"D:\D\App\IAR\arm\bin\armstlink2.dll" 
+
+"D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Exe\HTTTDLL.out" 
+
+--plugin="D:\D\App\IAR\arm\bin\armbat.dll" 
+
+--device_macro="D:\D\App\IAR\arm\config\debugger\ST\STM32F1xx.dmac" 
+
+--flash_loader="D:\D\App\IAR\arm\config\flashloader\ST\FlashSTM32F10xx8.board" 
+
+
+
+

@@ -1,0 +1,4 @@
+systick.pbi: D:\My_Embedded\Micontroller\Stm32f10x\source\systick.c \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\systick.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\bit.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\my_rcc.h

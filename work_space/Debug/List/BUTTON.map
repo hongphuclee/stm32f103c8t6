@@ -1,0 +1,208 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.1.212/W32 for ARM                  22/Aug/2024  20:49:47
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Exe\BUTTON.out
+#    Map file     =
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\List\BUTTON.map
+#    Command line =
+#        -f C:\Users\ADMIN\AppData\Local\Temp\EWF7DE.tmp
+#        (D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\gpio.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\main_button.o
+#        --no_out_extension -o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Exe\BUTTON.out
+#        --map
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\List\BUTTON.map
+#        --config D:\D\App\IAR\arm\config\linker\ST\stm32f103x8.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'ffff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'4fff] {
+          rw, block CSTACK, block HEAP };
+
+  Section          Kind         Address   Size  Object
+  -------          ----         -------   ----  ------
+"A0":                                     0x40
+  .intvec          ro code   0x800'0000   0x40  vector_table_M.o [3]
+                           - 0x800'0040   0x40
+
+"P1":                                    0x1f0
+  .text            ro code   0x800'0040   0xc4  main_button.o [1]
+  .text            ro code   0x800'0104   0x66  gpio.o [1]
+  .text            ro code   0x800'016a   0x3a  zero_init3.o [3]
+  .text            ro code   0x800'01a4   0x28  data_init.o [3]
+  .iar.init_table  const     0x800'01cc   0x10  - Linker created -
+  .text            ro code   0x800'01dc   0x1e  cmain.o [3]
+  .text            ro code   0x800'01fa    0x4  low_level_init.o [2]
+  .text            ro code   0x800'01fe    0x4  exit.o [2]
+  .text            ro code   0x800'0202    0x2  vector_table_M.o [3]
+  .text            ro code   0x800'0204    0xa  cexit.o [3]
+  .text            ro code   0x800'0210   0x14  exit.o [4]
+  .text            ro code   0x800'0224    0xc  cstartup_M.o [3]
+  .rodata          const     0x800'0230    0x0  zero_init3.o [3]
+                           - 0x800'0230  0x1f0
+
+"P2", part 1 of 2:                         0x4
+  .bss             zero     0x2000'0000    0x1  main_button.o [1]
+                          - 0x2000'0001    0x1
+
+"P2", part 2 of 2:                       0x800
+  CSTACK                    0x2000'0008  0x800  <Block>
+    CSTACK         uninit   0x2000'0008  0x800  <Block tail>
+                          - 0x2000'0808  0x800
+
+Absolute sections, part 1 of 4:           0x1c
+  .noinit          uninit   0x4001'0800   0x1c  main_button.o [1]
+                          - 0x4001'081c   0x1c
+
+Absolute sections, part 2 of 4:           0x1c
+  .noinit          uninit   0x4001'0c00   0x1c  main_button.o [1]
+                          - 0x4001'0c1c   0x1c
+
+Absolute sections, part 3 of 4:           0x1c
+  .noinit          uninit   0x4001'1000   0x1c  main_button.o [1]
+                          - 0x4001'101c   0x1c
+
+Absolute sections, part 4 of 4:           0x1c
+  .noinit          uninit   0x4002'1000   0x1c  main_button.o [1]
+                          - 0x4002'101c   0x1c
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'0230   0x800'ffff  0xfdd0
+  0x2000'0004  0x2000'0007     0x4
+  0x2000'0808  0x2000'4fff  0x47f8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x1:
+          0x2000'0000   0x1
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data  rw data
+                                                  (abs)
+    ------            -------  -------  -------  -------
+command line/config:
+    ----------------------------------------------------
+    Total:
+
+D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj: [1]
+    gpio.o                102
+    main_button.o         196                 1      112
+    ----------------------------------------------------
+    Total:                298                 1      112
+
+dl7M_tln.a: [2]
+    exit.o                  4
+    low_level_init.o        4
+    ----------------------------------------------------
+    Total:                  8
+
+rt7M_tl.a: [3]
+    cexit.o                10
+    cmain.o                30
+    cstartup_M.o           12
+    data_init.o            40
+    vector_table_M.o       66
+    zero_init3.o           58
+    ----------------------------------------------------
+    Total:                216
+
+shb_l.a: [4]
+    exit.o                 20
+    ----------------------------------------------------
+    Total:                 20
+
+    Gaps                    2
+    Linker created                  16    2'048
+--------------------------------------------------------
+    Grand Total:          544       16    2'049      112
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address  Size  Type      Object
+-----                       -------  ----  ----      ------
+.iar.init_table$$Base    0x800'01cc         --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'01dc         --   Gb  - Linker created -
+?main                    0x800'01dd        Code  Gb  cmain.o [3]
+CSTACK$$Base            0x2000'0008         --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0808         --   Gb  - Linker created -
+GPIOA                   0x4001'0800  0x1c  Data  Gb  main_button.o [1]
+GPIOB                   0x4001'0c00  0x1c  Data  Gb  main_button.o [1]
+GPIOC                   0x4001'1000  0x1c  Data  Gb  main_button.o [1]
+GPIO_Mode                0x800'0105  0x66  Code  Gb  gpio.o [1]
+RCC                     0x4002'1000  0x1c  Data  Gb  main_button.o [1]
+Region$$Table$$Base      0x800'01cc         --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'01dc         --   Gb  - Linker created -
+__cmain                  0x800'01dd        Code  Gb  cmain.o [3]
+__exit                   0x800'0211  0x14  Code  Gb  exit.o [4]
+__iar_data_init3         0x800'01a5  0x28  Code  Gb  data_init.o [3]
+__iar_program_start      0x800'0225        Code  Gb  cstartup_M.o [3]
+__iar_zero_init3         0x800'016b  0x3a  Code  Gb  zero_init3.o [3]
+__low_level_init         0x800'01fb   0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000        Data  Gb  vector_table_M.o [3]
+_call_main               0x800'01e9        Code  Gb  cmain.o [3]
+_exit                    0x800'0205        Code  Gb  cexit.o [3]
+_main                    0x800'01f7        Code  Gb  cmain.o [3]
+exit                     0x800'01ff   0x4  Code  Gb  exit.o [2]
+main                     0x800'0041  0xc4  Code  Gb  main_button.o [1]
+xx                      0x2000'0000   0x1  Data  Gb  main_button.o [1]
+
+
+[1] = D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+    544 bytes of readonly  code memory
+     16 bytes of readonly  data memory
+  2'049 bytes of readwrite data memory (+ 112 absolute)
+
+Errors: none
+Warnings: none

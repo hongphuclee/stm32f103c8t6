@@ -1,0 +1,107 @@
+#include<LHP_stm32f103.h>
+
+
+
+void main(){
+  
+  SysTick_Init(1);
+
+  RCC.APB2_ENR.BIT.IOPBEN = 1;
+  GPIO_Mode(&GPIOB, BIT8 | BIT9, output_push_pull_10Mhz);
+  SDA(1);
+  SCL(1);
+  delay(15);
+  
+  I2C_Write(0x27, 0, 0x08);
+  delay(1000);
+  
+  I2C_Write(0x27, 0, 0x38);
+  I2C_Write(0x27, 0, 0x3C);
+  I2C_Write(0x27, 0, 0x38);
+  delay(5);
+  
+  I2C_Write(0x27, 0, 0x38);
+  I2C_Write(0x27, 0, 0x3C);
+  I2C_Write(0x27, 0, 0x38);
+  delay(1);
+  
+  I2C_Write(0x27, 0, 0x38);
+  I2C_Write(0x27, 0, 0x3C);
+  I2C_Write(0x27, 0, 0x38);
+  delay(1);
+  
+  I2C_Write(0x27, 0, 0x28);
+  I2C_Write(0x27, 0, 0x2C);
+  I2C_Write(0x27, 0, 0x28);
+  delay(1);
+  
+  I2C_Write(0x27, 0, 0x28);
+  I2C_Write(0x27, 0, 0x2C);
+  I2C_Write(0x27, 0, 0x28);
+  delay(1);
+  I2C_Write(0x27, 0, 0x88);
+  I2C_Write(0x27, 0, 0x8C);
+  I2C_Write(0x27, 0, 0x88);
+  delay(1);
+  
+  I2C_Write(0x27, 0, 0x08);
+  I2C_Write(0x27, 0, 0x0C);
+  I2C_Write(0x27, 0, 0x08);
+  delay(1);
+  I2C_Write(0x27, 0, 0xC8);
+  I2C_Write(0x27, 0, 0xCC);
+  I2C_Write(0x27, 0, 0xC8);
+  delay(1);
+  
+  I2C_Write(0x27, 0, 0x08);
+  I2C_Write(0x27, 0, 0x0C);
+  I2C_Write(0x27, 0, 0x08);
+  delay(1);
+  I2C_Write(0x27, 0, 0x18);
+  I2C_Write(0x27, 0, 0x1C);
+  I2C_Write(0x27, 0, 0x18);
+  delay(2);
+  
+  I2C_Write(0x27, 0, 0x08);
+  I2C_Write(0x27, 0, 0x0C);
+  I2C_Write(0x27, 0, 0x08);
+  delay(1);
+  I2C_Write(0x27, 0, 0x6B);
+  I2C_Write(0x27, 0, 0x6C);
+  I2C_Write(0x27, 0, 0x68);
+  delay(1);
+  
+  I2C_Write(0x27, 0, 0x08);
+  I2C_Write(0x27, 0, 0x0C);
+  I2C_Write(0x27, 0, 0x08);
+  delay(1);
+  I2C_Write(0x27, 0, 0x28);
+  I2C_Write(0x27, 0, 0x2C);
+  I2C_Write(0x27, 0, 0x28);
+  delay(1);
+  
+  I2C_Write(0x27, 0, 0xC8);
+  I2C_Write(0x27, 0, 0xCC);
+  I2C_Write(0x27, 0, 0xC8);
+  delay(1);
+  I2C_Write(0x27, 0, 0x08);
+  I2C_Write(0x27, 0, 0x0C);
+  I2C_Write(0x27, 0, 0x08);
+  delay(1);
+  
+  while(1){
+                                                                           
+  I2C_Write(0x27, 0, 0x59);
+  I2C_Write(0x27, 0, 0x5D);
+  I2C_Write(0x27, 0, 0x59);
+  
+  delay(1);
+  I2C_Write(0x27, 0, 0x09);
+  I2C_Write(0x27, 0, 0x0D);
+  I2C_Write(0x27, 0, 0x09);
+  delay(1);
+  
+  delay(600);
+    
+  }
+}

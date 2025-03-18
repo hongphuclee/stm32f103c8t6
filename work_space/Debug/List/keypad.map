@@ -1,0 +1,311 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.1.212/W32 for ARM                  01/Nov/2024  21:15:10
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Exe\keypad.out
+#    Map file     =
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\List\keypad.map
+#    Command line =
+#        -f C:\Users\ADMIN\AppData\Local\Temp\EW6403.tmp
+#        (D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\gpio.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\keypad.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\startup_stm32f103cx.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\systick.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\Timer1.o
+#        --no_out_extension -o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Exe\keypad.out
+#        --map
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\List\keypad.map
+#        --config D:\D\App\IAR\arm\config\linker\ST\stm32f101x8.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'ffff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'27ff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address   Size  Object
+  -------            ----         -------   ----  ------
+"A0":                                       0xec
+  .intvec            ro code   0x800'0000   0xec  startup_stm32f103cx.o [1]
+                             - 0x800'00ec   0xec
+
+"P1":                                      0x404
+  .text              ro code   0x800'00ec  0x1b0  keypad.o [1]
+  .text              ro code   0x800'029c   0x66  gpio.o [1]
+  .text              ro code   0x800'0302   0x2e  copy_init3.o [3]
+  .text              ro code   0x800'0330   0x34  Timer1.o [1]
+  .text              ro code   0x800'0364   0x28  data_init.o [3]
+  .iar.init_table    const     0x800'038c   0x14  - Linker created -
+  .text              ro code   0x800'03a0   0x1e  cmain.o [3]
+  .text              ro code   0x800'03be    0x4  low_level_init.o [2]
+  .text              ro code   0x800'03c2    0x4  exit.o [2]
+  .text              ro code   0x800'03c8    0xa  cexit.o [3]
+  .text              ro code   0x800'03d4   0x14  exit.o [4]
+  Initializer bytes  const     0x800'03e8   0x1c  <for P2-1>
+  .text              ro code   0x800'0404   0x10  systick.o [1]
+  .text              ro code   0x800'0414    0xc  cstartup_M.o [3]
+  .text              ro code   0x800'0420    0x8  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0428    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'042c    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0430    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0434    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0438    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'043c    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0440    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0444    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0448    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'044c    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0450    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0454    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0458    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'045c    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0460    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0464    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0468    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'046c    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0470    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0474    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0478    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'047c    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0480    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0484    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0488    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'048c    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0490    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0494    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'0498    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'049c    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04a0    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04a4    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04a8    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04ac    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04b0    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04b4    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04b8    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04bc    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04c0    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04c4    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04c8    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04cc    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04d0    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04d4    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04d8    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04dc    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04e0    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04e4    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04e8    0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'04ec    0x4  startup_stm32f103cx.o [1]
+  .rodata            const     0x800'04f0    0x0  copy_init3.o [3]
+                             - 0x800'04f0  0x404
+
+"P2", part 1 of 2:                          0x1c
+  P2-1                        0x2000'0000   0x1b  <Init block>
+    .data            inited   0x2000'0000   0x10  keypad.o [1]
+    .bss             inited   0x2000'0010    0x4  keypad.o [1]
+    .bss             inited   0x2000'0014    0x4  systick.o [1]
+    .data            inited   0x2000'0018    0x2  keypad.o [1]
+    .bss             inited   0x2000'001a    0x1  keypad.o [1]
+                            - 0x2000'001b   0x1b
+
+"P2", part 2 of 2:                         0x800
+  CSTACK                      0x2000'0020  0x800  <Block>
+    CSTACK           uninit   0x2000'0020  0x800  <Block tail>
+                            - 0x2000'0820  0x800
+
+Absolute sections, part 1 of 10:            0x1c
+  .noinit            uninit   0x4000'4400   0x1c  Timer1.o [1]
+                            - 0x4000'441c   0x1c
+
+Absolute sections, part 2 of 10:            0x1c
+  .noinit            uninit   0x4001'0800   0x1c  Timer1.o [1]
+                            - 0x4001'081c   0x1c
+
+Absolute sections, part 3 of 10:            0x1c
+  .noinit            uninit   0x4001'0c00   0x1c  Timer1.o [1]
+                            - 0x4001'0c1c   0x1c
+
+Absolute sections, part 4 of 10:            0x1c
+  .noinit            uninit   0x4001'1000   0x1c  Timer1.o [1]
+                            - 0x4001'101c   0x1c
+
+Absolute sections, part 5 of 10:            0x54
+  .noinit            uninit   0x4001'2c00   0x54  Timer1.o [1]
+                            - 0x4001'2c54   0x54
+
+Absolute sections, part 6 of 10:            0x1c
+  .noinit            uninit   0x4001'3800   0x1c  Timer1.o [1]
+                            - 0x4001'381c   0x1c
+
+Absolute sections, part 7 of 10:            0x78
+  .noinit            uninit   0x4002'0000   0x78  Timer1.o [1]
+                            - 0x4002'0078   0x78
+
+Absolute sections, part 8 of 10:            0x30
+  .noinit            uninit   0x4002'1000   0x30  Timer1.o [1]
+                            - 0x4002'1030   0x30
+
+Absolute sections, part 9 of 10:            0x10
+  .noinit            uninit   0xe000'e010   0x10  Timer1.o [1]
+                            - 0xe000'e020   0x10
+
+Absolute sections, part 10 of 10:            0xc
+  .noinit            uninit   0xe000'e100    0xc  Timer1.o [1]
+                            - 0xe000'e10c    0xc
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'04f0   0x800'ffff  0xfb10
+  0x2000'001c  0x2000'001f     0x4
+  0x2000'0820  0x2000'27ff  0x1fe0
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x1c (103% of destination):
+           0x800'03e8  0x1c
+    1 destination range, total size 0x1b:
+          0x2000'0000  0x1b
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data  rw data
+                                                       (abs)
+    ------                 -------  -------  -------  -------
+command line/config:
+    ---------------------------------------------------------
+    Total:
+
+D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj: [1]
+    Timer1.o                    52                        420
+    gpio.o                     102
+    keypad.o                   432       23       23
+    startup_stm32f103cx.o      444
+    systick.o                   16        4        4
+    ---------------------------------------------------------
+    Total:                   1'046       27       27      420
+
+dl7M_tln.a: [2]
+    exit.o                       4
+    low_level_init.o             4
+    ---------------------------------------------------------
+    Total:                       8
+
+rt7M_tl.a: [3]
+    cexit.o                     10
+    cmain.o                     30
+    copy_init3.o                46
+    cstartup_M.o                12
+    data_init.o                 40
+    ---------------------------------------------------------
+    Total:                     138
+
+shb_l.a: [4]
+    exit.o                      20
+    ---------------------------------------------------------
+    Total:                      20
+
+    Gaps                         4
+    Linker created                       21    2'048
+-------------------------------------------------------------
+    Grand Total:             1'216       48    2'075      420
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'038c          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'03a0          --   Gb  - Linker created -
+?main                    0x800'03a1         Code  Gb  cmain.o [3]
+CSTACK$$Base            0x2000'0020          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0820          --   Gb  - Linker created -
+DMA1                    0x4002'0000   0x78  Data  Gb  Timer1.o [1]
+GPIOA                   0x4001'0800   0x1c  Data  Gb  Timer1.o [1]
+GPIOB                   0x4001'0c00   0x1c  Data  Gb  Timer1.o [1]
+GPIOC                   0x4001'1000   0x1c  Data  Gb  Timer1.o [1]
+GPIO_Mode                0x800'029d   0x66  Code  Gb  gpio.o [1]
+MsTick                  0x2000'001a    0x1  Data  Gb  keypad.o [1]
+NVIC                    0xe000'e100    0xc  Data  Gb  Timer1.o [1]
+RCC                     0x4002'1000   0x30  Data  Gb  Timer1.o [1]
+Region$$Table$$Base      0x800'038c          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'03a0          --   Gb  - Linker created -
+STK                     0xe000'e010   0x10  Data  Gb  Timer1.o [1]
+SysTick_Handler          0x800'0405    0xa  Code  Gb  systick.o [1]
+TIM1_UP_IRQHandler       0x800'00ed    0xe  Code  Gb  keypad.o [1]
+Timer1                  0x4001'2c00   0x54  Data  Gb  Timer1.o [1]
+Timer1_Init              0x800'0331   0x34  Code  Gb  Timer1.o [1]
+UART1                   0x4001'3800   0x1c  Data  Gb  Timer1.o [1]
+UART2                   0x4000'4400   0x1c  Data  Gb  Timer1.o [1]
+Vi_tri                  0x2000'0010    0x4  Data  Gb  keypad.o [1]
+__cmain                  0x800'03a1         Code  Gb  cmain.o [3]
+__exit                   0x800'03d5   0x14  Code  Gb  exit.o [4]
+__iar_copy_init3         0x800'0303   0x2e  Code  Gb  copy_init3.o [3]
+__iar_data_init3         0x800'0365   0x28  Code  Gb  data_init.o [3]
+__iar_program_start      0x800'0415         Code  Gb  cstartup_M.o [3]
+__low_level_init         0x800'03bf    0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000         Data  Gb  startup_stm32f103cx.o [1]
+_call_main               0x800'03ad         Code  Gb  cmain.o [3]
+_exit                    0x800'03c9         Code  Gb  cexit.o [3]
+_main                    0x800'03bb         Code  Gb  cmain.o [3]
+bang_ma                 0x2000'0000   0x10  Data  Gb  keypad.o [1]
+exit                     0x800'03c3    0x4  Code  Gb  exit.o [2]
+ma_phim                 0x2000'0018    0x2  Data  Gb  keypad.o [1]
+main                     0x800'00fb  0x186  Code  Gb  keypad.o [1]
+sys_current_time        0x2000'0014    0x4  Data  Gb  systick.o [1]
+
+
+[1] = D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+  1'216 bytes of readonly  code memory
+     48 bytes of readonly  data memory
+  2'075 bytes of readwrite data memory (+ 420 absolute)
+
+Errors: none
+Warnings: none

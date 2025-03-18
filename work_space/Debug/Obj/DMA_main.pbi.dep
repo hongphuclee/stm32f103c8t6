@@ -1,0 +1,4 @@
+dma_main.pbi: D:\My_Embedded\Micontroller\Stm32f10x\include\bit.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\my_dma.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\my_rcc.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\test_lib\dma_main.c

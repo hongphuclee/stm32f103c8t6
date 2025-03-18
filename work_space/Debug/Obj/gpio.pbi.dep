@@ -1,0 +1,3 @@
+gpio.pbi: D:\My_Embedded\Micontroller\Stm32f10x\source\gpio.c \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\gpio.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\my_rcc.h

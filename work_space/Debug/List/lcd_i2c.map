@@ -1,0 +1,263 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.1.212/W32 for ARM                  01/Nov/2024  22:55:12
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Exe\lcd_i2c.out
+#    Map file     =
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\List\lcd_i2c.map
+#    Command line =
+#        -f C:\Users\ADMIN\AppData\Local\Temp\EWFA70.tmp
+#        (D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\gpio.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\I2C.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\lcd_i2c.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\main_lcd_i2c.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\systick.o
+#        --no_out_extension -o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Exe\lcd_i2c.out
+#        --map
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\List\lcd_i2c.map
+#        --config D:\D\App\IAR\arm\config\linker\ST\stm32f103x8.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'ffff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'4fff] {
+          rw, block CSTACK, block HEAP };
+
+  Section          Kind         Address   Size  Object
+  -------          ----         -------   ----  ------
+"A0":                                     0x40
+  .intvec          ro code   0x800'0000   0x40  vector_table_M.o [3]
+                           - 0x800'0040   0x40
+
+"P1":                                    0x89c
+  .text            ro code   0x800'0040  0x346  I2C.o [1]
+  .text            ro code   0x800'0386  0x336  lcd_i2c.o [1]
+  .text            ro code   0x800'06bc   0x4c  systick.o [1]
+  .text            ro code   0x800'0708   0x90  main_lcd_i2c.o [1]
+  .text            ro code   0x800'0798   0x66  gpio.o [1]
+  .text            ro code   0x800'07fe   0x3a  zero_init3.o [3]
+  .text            ro code   0x800'0838   0x28  data_init.o [3]
+  .iar.init_table  const     0x800'0860   0x10  - Linker created -
+  .text            ro code   0x800'0870   0x1e  cmain.o [3]
+  .text            ro code   0x800'088e    0x4  low_level_init.o [2]
+  .text            ro code   0x800'0892    0x4  exit.o [2]
+  .text            ro code   0x800'0896    0x2  vector_table_M.o [3]
+  .text            ro code   0x800'0898    0xa  cexit.o [3]
+  .text            ro code   0x800'08a4   0x14  exit.o [4]
+  .rodata          const     0x800'08b8   0x10  main_lcd_i2c.o [1]
+  .text            ro code   0x800'08c8    0xc  cstartup_M.o [3]
+  .rodata          const     0x800'08d4    0x8  main_lcd_i2c.o [1]
+  .rodata          const     0x800'08dc    0x0  zero_init3.o [3]
+                           - 0x800'08dc  0x89c
+
+"P2", part 1 of 2:                         0x8
+  .bss             zero     0x2000'0000    0x4  systick.o [1]
+  .bss             zero     0x2000'0004    0x4  systick.o [1]
+                          - 0x2000'0008    0x8
+
+"P2", part 2 of 2:                       0x800
+  CSTACK                    0x2000'0008  0x800  <Block>
+    CSTACK         uninit   0x2000'0008  0x800  <Block tail>
+                          - 0x2000'0808  0x800
+
+Absolute sections, part 1 of 10:          0x1c
+  .noinit          uninit   0x4000'4400   0x1c  main_lcd_i2c.o [1]
+                          - 0x4000'441c   0x1c
+
+Absolute sections, part 2 of 10:          0x1c
+  .noinit          uninit   0x4001'0800   0x1c  main_lcd_i2c.o [1]
+                          - 0x4001'081c   0x1c
+
+Absolute sections, part 3 of 10:          0x1c
+  .noinit          uninit   0x4001'0c00   0x1c  main_lcd_i2c.o [1]
+                          - 0x4001'0c1c   0x1c
+
+Absolute sections, part 4 of 10:          0x1c
+  .noinit          uninit   0x4001'1000   0x1c  main_lcd_i2c.o [1]
+                          - 0x4001'101c   0x1c
+
+Absolute sections, part 5 of 10:          0x54
+  .noinit          uninit   0x4001'2c00   0x54  main_lcd_i2c.o [1]
+                          - 0x4001'2c54   0x54
+
+Absolute sections, part 6 of 10:          0x1c
+  .noinit          uninit   0x4001'3800   0x1c  main_lcd_i2c.o [1]
+                          - 0x4001'381c   0x1c
+
+Absolute sections, part 7 of 10:          0x78
+  .noinit          uninit   0x4002'0000   0x78  main_lcd_i2c.o [1]
+                          - 0x4002'0078   0x78
+
+Absolute sections, part 8 of 10:          0x30
+  .noinit          uninit   0x4002'1000   0x30  systick.o [1]
+                          - 0x4002'1030   0x30
+
+Absolute sections, part 9 of 10:          0x10
+  .noinit          uninit   0xe000'e010   0x10  systick.o [1]
+                          - 0xe000'e020   0x10
+
+Absolute sections, part 10 of 10:          0xc
+  .noinit          uninit   0xe000'e100    0xc  main_lcd_i2c.o [1]
+                          - 0xe000'e10c    0xc
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'08dc   0x800'ffff  0xf724
+  0x2000'0808  0x2000'4fff  0x47f8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x8:
+          0x2000'0000   0x8
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data  rw data
+                                                  (abs)
+    ------            -------  -------  -------  -------
+command line/config:
+    ----------------------------------------------------
+    Total:
+
+D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj: [1]
+    I2C.o                 838
+    gpio.o                102
+    lcd_i2c.o             822
+    main_lcd_i2c.o        144       24               356
+    systick.o              76                 8       64
+    ----------------------------------------------------
+    Total:              1'982       24        8      420
+
+dl7M_tln.a: [2]
+    exit.o                  4
+    low_level_init.o        4
+    ----------------------------------------------------
+    Total:                  8
+
+rt7M_tl.a: [3]
+    cexit.o                10
+    cmain.o                30
+    cstartup_M.o           12
+    data_init.o            40
+    vector_table_M.o       66
+    zero_init3.o           58
+    ----------------------------------------------------
+    Total:                216
+
+shb_l.a: [4]
+    exit.o                 20
+    ----------------------------------------------------
+    Total:                 20
+
+    Gaps                    2
+    Linker created                  16    2'048
+--------------------------------------------------------
+    Grand Total:        2'228       40    2'056      420
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'0860          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'0870          --   Gb  - Linker created -
+?main                    0x800'0871         Code  Gb  cmain.o [3]
+CSTACK$$Base            0x2000'0008          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0808          --   Gb  - Linker created -
+DMA1                    0x4002'0000   0x78  Data  Gb  main_lcd_i2c.o [1]
+GPIOA                   0x4001'0800   0x1c  Data  Gb  main_lcd_i2c.o [1]
+GPIOB                   0x4001'0c00   0x1c  Data  Gb  main_lcd_i2c.o [1]
+GPIOC                   0x4001'1000   0x1c  Data  Gb  main_lcd_i2c.o [1]
+GPIO_Mode                0x800'0799   0x66  Code  Gb  gpio.o [1]
+I2C_Start                0x800'0041   0x3c  Code  Gb  I2C.o [1]
+I2C_Stop                 0x800'007d   0x46  Code  Gb  I2C.o [1]
+I2C_Write                0x800'0361   0x26  Code  Gb  I2C.o [1]
+I2C_Write_Byte           0x800'00c3  0x298  Code  Gb  I2C.o [1]
+LCD_Clear                0x800'06b3    0xa  Code  Gb  lcd_i2c.o [1]
+LCD_Init                 0x800'0387  0x214  Code  Gb  lcd_i2c.o [1]
+LCD_Write                0x800'059b   0x7a  Code  Gb  lcd_i2c.o [1]
+LCD_Write_Command        0x800'0639   0x7a  Code  Gb  lcd_i2c.o [1]
+LCD_Writes               0x800'0615   0x24  Code  Gb  lcd_i2c.o [1]
+NVIC                    0xe000'e100    0xc  Data  Gb  main_lcd_i2c.o [1]
+RCC                     0x4002'1000   0x30  Data  Gb  systick.o [1]
+Region$$Table$$Base      0x800'0860          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'0870          --   Gb  - Linker created -
+STK                     0xe000'e010   0x10  Data  Gb  systick.o [1]
+SysTick_Handler          0x800'06d3    0xa  Code  Gb  systick.o [1]
+SysTick_Init             0x800'06bd   0x16  Code  Gb  systick.o [1]
+Timer1                  0x4001'2c00   0x54  Data  Gb  main_lcd_i2c.o [1]
+UART1                   0x4001'3800   0x1c  Data  Gb  main_lcd_i2c.o [1]
+UART2                   0x4000'4400   0x1c  Data  Gb  main_lcd_i2c.o [1]
+__cmain                  0x800'0871         Code  Gb  cmain.o [3]
+__exit                   0x800'08a5   0x14  Code  Gb  exit.o [4]
+__iar_data_init3         0x800'0839   0x28  Code  Gb  data_init.o [3]
+__iar_program_start      0x800'08c9         Code  Gb  cstartup_M.o [3]
+__iar_zero_init3         0x800'07ff   0x3a  Code  Gb  zero_init3.o [3]
+__low_level_init         0x800'088f    0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000         Data  Gb  vector_table_M.o [3]
+_call_main               0x800'087d         Code  Gb  cmain.o [3]
+_exit                    0x800'0899         Code  Gb  cexit.o [3]
+_main                    0x800'088b         Code  Gb  cmain.o [3]
+delay                    0x800'06e3   0x1a  Code  Gb  systick.o [1]
+exit                     0x800'0893    0x4  Code  Gb  exit.o [2]
+get_time                 0x800'06dd    0x6  Code  Gb  systick.o [1]
+main                     0x800'0709   0x90  Code  Gb  main_lcd_i2c.o [1]
+start_time              0x2000'0004    0x4  Data  Lc  systick.o [1]
+sys_current_time        0x2000'0000    0x4  Data  Gb  systick.o [1]
+
+
+[1] = D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+  2'228 bytes of readonly  code memory
+     40 bytes of readonly  data memory
+  2'056 bytes of readwrite data memory (+ 420 absolute)
+
+Errors: none
+Warnings: none

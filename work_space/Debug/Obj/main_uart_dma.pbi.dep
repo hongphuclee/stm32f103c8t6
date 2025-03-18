@@ -1,0 +1,7 @@
+main_uart_dma.pbi: D:\My_Embedded\Micontroller\Stm32f10x\include\UART.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\bit.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\systick.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\nvic.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\my_rcc.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\gpio.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\test_lib\main_uart_dma.c

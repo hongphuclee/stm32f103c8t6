@@ -1,0 +1,368 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.1.212/W32 for ARM                  26/Nov/2024  00:39:09
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Exe\HTTTDLL.out
+#    Map file     =
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\List\HTTTDLL.map
+#    Command line =
+#        -f C:\Users\ADMIN\AppData\Local\Temp\EW42D2.tmp
+#        (D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\gpio.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\HTTDL.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\I2C.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\lcd_i2c.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\startup_stm32f103cx.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\systick.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\Timer1.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\UART.o
+#        --no_out_extension -o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Exe\HTTTDLL.out
+#        --map
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\List\HTTTDLL.map
+#        --config D:\D\App\IAR\arm\config\linker\ST\stm32f103x8.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'ffff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'4fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                        0xec
+  .intvec            ro code   0x800'0000    0xec  startup_stm32f103cx.o [1]
+                             - 0x800'00ec    0xec
+
+"P1":                                      0x108f
+  .text              ro code   0x800'00ec   0x68c  HTTDL.o [1]
+  .text              ro code   0x800'0778    0xaa  UART.o [1]
+  .text              ro code   0x800'0824    0x4c  systick.o [1]
+  .text              ro code   0x800'0870    0x34  Timer1.o [1]
+  .text              ro code   0x800'08a4    0x66  gpio.o [1]
+  .text              ro code   0x800'090a   0x34a  lcd_i2c.o [1]
+  .text              ro code   0x800'0c54   0x33a  I2C.o [1]
+  .text              ro code   0x800'0f8e    0x38  packbits_init_single.o [3]
+  .text              ro code   0x800'0fc8    0x28  data_init.o [3]
+  .iar.init_table    const     0x800'0ff0    0x10  - Linker created -
+  .text              ro code   0x800'1000    0x1e  cmain.o [3]
+  .text              ro code   0x800'101e     0x4  low_level_init.o [2]
+  .text              ro code   0x800'1022     0x4  exit.o [2]
+  .text              ro code   0x800'1028     0xa  cexit.o [3]
+  .text              ro code   0x800'1034    0x14  exit.o [4]
+  .rodata            const     0x800'1048    0x14  HTTDL.o [1]
+  .rodata            const     0x800'105c     0xc  HTTDL.o [1]
+  .rodata            const     0x800'1068     0xc  HTTDL.o [1]
+  .rodata            const     0x800'1074     0xc  HTTDL.o [1]
+  .rodata            const     0x800'1080     0xc  HTTDL.o [1]
+  .text              ro code   0x800'108c     0xc  cstartup_M.o [3]
+  .text              ro code   0x800'1098     0x8  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10a0     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10a4     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10a8     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10ac     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10b0     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10b4     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10b8     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10bc     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10c0     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10c4     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10c8     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10cc     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10d0     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10d4     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10d8     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10dc     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10e0     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10e4     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10e8     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10ec     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10f0     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10f4     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10f8     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'10fc     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1100     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1104     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1108     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'110c     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1110     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1114     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1118     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'111c     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1120     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1124     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1128     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'112c     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1130     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1134     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1138     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'113c     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1140     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1144     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1148     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'114c     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1150     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1154     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1158     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'115c     0x4  startup_stm32f103cx.o [1]
+  .text              ro code   0x800'1160     0x4  startup_stm32f103cx.o [1]
+  .rodata            const     0x800'1164     0x0  packbits_init_single.o [3]
+  Initializer bytes  const     0x800'1164    0x17  <for P2-1>
+                             - 0x800'117b  0x108f
+
+"P2", part 1 of 2:                           0x2b
+  P2-1                        0x2000'0000    0x2b  <Init block>
+    .data            inited   0x2000'0000    0x10  HTTDL.o [1]
+    .bss             inited   0x2000'0010     0x4  HTTDL.o [1]
+    .bss             inited   0x2000'0014     0x4  systick.o [1]
+    .bss             inited   0x2000'0018     0x4  systick.o [1]
+    .data            inited   0x2000'001c     0x2  HTTDL.o [1]
+    .bss             inited   0x2000'001e     0x2  HTTDL.o [1]
+    .bss             inited   0x2000'0020     0x2  HTTDL.o [1]
+    .bss             inited   0x2000'0022     0x2  HTTDL.o [1]
+    .bss             inited   0x2000'0024     0x1  HTTDL.o [1]
+    .bss             inited   0x2000'0025     0x1  HTTDL.o [1]
+    .bss             inited   0x2000'0026     0x1  HTTDL.o [1]
+    .bss             inited   0x2000'0027     0x1  HTTDL.o [1]
+    .bss             inited   0x2000'0028     0x1  HTTDL.o [1]
+    .bss             inited   0x2000'0029     0x1  HTTDL.o [1]
+    .bss             inited   0x2000'002a     0x1  HTTDL.o [1]
+                            - 0x2000'002b    0x2b
+
+"P2", part 2 of 2:                          0x800
+  CSTACK                      0x2000'0030   0x800  <Block>
+    CSTACK           uninit   0x2000'0030   0x800  <Block tail>
+                            - 0x2000'0830   0x800
+
+Absolute sections, part 1 of 11:             0x1c
+  .noinit            uninit   0x4000'4400    0x1c  UART.o [1]
+                            - 0x4000'441c    0x1c
+
+Absolute sections, part 2 of 11:             0x1c
+  .noinit            uninit   0x4001'0800    0x1c  UART.o [1]
+                            - 0x4001'081c    0x1c
+
+Absolute sections, part 3 of 11:             0x1c
+  .noinit            uninit   0x4001'0c00    0x1c  UART.o [1]
+                            - 0x4001'0c1c    0x1c
+
+Absolute sections, part 4 of 11:             0x1c
+  .noinit            uninit   0x4001'1000    0x1c  UART.o [1]
+                            - 0x4001'101c    0x1c
+
+Absolute sections, part 5 of 11:             0x50
+  .noinit            uninit   0x4001'2400    0x50  UART.o [1]
+                            - 0x4001'2450    0x50
+
+Absolute sections, part 6 of 11:             0x54
+  .noinit            uninit   0x4001'2c00    0x54  UART.o [1]
+                            - 0x4001'2c54    0x54
+
+Absolute sections, part 7 of 11:             0x1c
+  .noinit            uninit   0x4001'3800    0x1c  UART.o [1]
+                            - 0x4001'381c    0x1c
+
+Absolute sections, part 8 of 11:             0x78
+  .noinit            uninit   0x4002'0000    0x78  UART.o [1]
+                            - 0x4002'0078    0x78
+
+Absolute sections, part 9 of 11:             0x30
+  .noinit            uninit   0x4002'1000    0x30  UART.o [1]
+                            - 0x4002'1030    0x30
+
+Absolute sections, part 10 of 11:            0x10
+  .noinit            uninit   0xe000'e010    0x10  UART.o [1]
+                            - 0xe000'e020    0x10
+
+Absolute sections, part 11 of 11:             0xc
+  .noinit            uninit   0xe000'e100     0xc  UART.o [1]
+                            - 0xe000'e10c     0xc
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'117b   0x800'ffff  0xee85
+  0x2000'002b  0x2000'002f     0x5
+  0x2000'0830  0x2000'4fff  0x47d0
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x17 (53% of destination):
+           0x800'1164  0x17
+    1 destination range, total size 0x2b:
+          0x2000'0000  0x2b
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data  rw data
+                                                        (abs)
+    ------                  -------  -------  -------  -------
+command line/config:
+    ----------------------------------------------------------
+    Total:
+
+D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj: [1]
+    HTTDL.o                   1'676       86       35
+    I2C.o                       826
+    Timer1.o                     52
+    UART.o                      170                        500
+    gpio.o                      102
+    lcd_i2c.o                   842
+    startup_stm32f103cx.o       440
+    systick.o                    76        4        8
+    ----------------------------------------------------------
+    Total:                    4'184       90       43      500
+
+dl7M_tln.a: [2]
+    exit.o                        4
+    low_level_init.o              4
+    ----------------------------------------------------------
+    Total:                        8
+
+rt7M_tl.a: [3]
+    cexit.o                      10
+    cmain.o                      30
+    cstartup_M.o                 12
+    data_init.o                  40
+    packbits_init_single.o       56
+    ----------------------------------------------------------
+    Total:                      148
+
+shb_l.a: [4]
+    exit.o                       20
+    ----------------------------------------------------------
+    Total:                       20
+
+    Gaps                          8
+    Linker created                        17    2'048
+--------------------------------------------------------------
+    Grand Total:              4'368      107    2'091      500
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'0ff0          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'1000          --   Gb  - Linker created -
+?main                    0x800'1001         Code  Gb  cmain.o [3]
+ADC1                    0x4001'2400   0x50  Data  Gb  UART.o [1]
+Buffer                  0x2000'0027    0x1  Data  Gb  HTTDL.o [1]
+Byte_Error              0x2000'001e    0x2  Data  Gb  HTTDL.o [1]
+CSTACK$$Base            0x2000'0030          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0830          --   Gb  - Linker created -
+DMA1                    0x4002'0000   0x78  Data  Gb  UART.o [1]
+Data                    0x2000'0024    0x1  Data  Gb  HTTDL.o [1]
+Data_Encoded            0x2000'0020    0x2  Data  Gb  HTTDL.o [1]
+Data_Encoded_Error      0x2000'0022    0x2  Data  Gb  HTTDL.o [1]
+Data_Error              0x2000'0025    0x1  Data  Gb  HTTDL.o [1]
+Encode_Hamming           0x800'00ed  0x196  Code  Gb  HTTDL.o [1]
+GPIOA                   0x4001'0800   0x1c  Data  Gb  UART.o [1]
+GPIOB                   0x4001'0c00   0x1c  Data  Gb  UART.o [1]
+GPIOC                   0x4001'1000   0x1c  Data  Gb  UART.o [1]
+GPIO_Mode                0x800'08a5   0x66  Code  Gb  gpio.o [1]
+I2C_Start                0x800'0c55   0x30  Code  Gb  I2C.o [1]
+I2C_Stop                 0x800'0c85   0x46  Code  Gb  I2C.o [1]
+I2C_Write                0x800'0f69   0x26  Code  Gb  I2C.o [1]
+I2C_Write_Byte           0x800'0ccb  0x298  Code  Gb  I2C.o [1]
+LCD_Clear                0x800'0c4b    0xa  Code  Gb  lcd_i2c.o [1]
+LCD_Index                0x800'0c1f   0x2c  Code  Gb  lcd_i2c.o [1]
+LCD_Init                 0x800'090b  0x214  Code  Gb  lcd_i2c.o [1]
+LCD_Write                0x800'0b1f   0x6e  Code  Gb  lcd_i2c.o [1]
+LCD_Write_Command        0x800'0bb1   0x6e  Code  Gb  lcd_i2c.o [1]
+LCD_Writes               0x800'0b8d   0x24  Code  Gb  lcd_i2c.o [1]
+Last_Stauts             0x2000'0029    0x1  Data  Gb  HTTDL.o [1]
+MsTick                  0x2000'002a    0x1  Data  Gb  HTTDL.o [1]
+NVIC                    0xe000'e100    0xc  Data  Gb  UART.o [1]
+RCC                     0x4002'1000   0x30  Data  Gb  UART.o [1]
+Region$$Table$$Base      0x800'0ff0          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'1000          --   Gb  - Linker created -
+STK                     0xe000'e010   0x10  Data  Gb  UART.o [1]
+Status                  0x2000'0028    0x1  Data  Gb  HTTDL.o [1]
+SysTick_Handler          0x800'083b    0xa  Code  Gb  systick.o [1]
+SysTick_Init             0x800'0825   0x16  Code  Gb  systick.o [1]
+TIM1_UP_IRQHandler       0x800'0291   0x12  Code  Gb  HTTDL.o [1]
+Timer1                  0x4001'2c00   0x54  Data  Gb  UART.o [1]
+Timer1_Init              0x800'0871   0x34  Code  Gb  Timer1.o [1]
+UART1                   0x4001'3800   0x1c  Data  Gb  UART.o [1]
+UART1_IRQHandler         0x800'0283    0xe  Code  Gb  HTTDL.o [1]
+UART1_Init               0x800'0779   0x4e  Code  Gb  UART.o [1]
+UART2                   0x4000'4400   0x1c  Data  Gb  UART.o [1]
+UART_Write               0x800'07d9   0x26  Code  Gb  UART.o [1]
+UART_Writes              0x800'07ff   0x24  Code  Gb  UART.o [1]
+Vi_tri                  0x2000'0010    0x4  Data  Gb  HTTDL.o [1]
+__cmain                  0x800'1001         Code  Gb  cmain.o [3]
+__exit                   0x800'1035   0x14  Code  Gb  exit.o [4]
+__iar_data_init3         0x800'0fc9   0x28  Code  Gb  data_init.o [3]
+__iar_packbits_init_single3
+                         0x800'0f8f   0x38  Code  Gb  packbits_init_single.o [3]
+__iar_program_start      0x800'108d         Code  Gb  cstartup_M.o [3]
+__low_level_init         0x800'101f    0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000         Data  Gb  startup_stm32f103cx.o [1]
+_call_main               0x800'100d         Code  Gb  cmain.o [3]
+_exit                    0x800'1029         Code  Gb  cexit.o [3]
+_main                    0x800'101b         Code  Gb  cmain.o [3]
+a                       0x2000'0026    0x1  Data  Gb  HTTDL.o [1]
+bang_ma                 0x2000'0000   0x10  Data  Gb  HTTDL.o [1]
+delay                    0x800'084b   0x1a  Code  Gb  systick.o [1]
+exit                     0x800'1023    0x4  Code  Gb  exit.o [2]
+get_time                 0x800'0845    0x6  Code  Gb  systick.o [1]
+ma_phim                 0x2000'001c    0x2  Data  Gb  HTTDL.o [1]
+main                     0x800'02a3  0x478  Code  Gb  HTTDL.o [1]
+start_time              0x2000'0018    0x4  Data  Lc  systick.o [1]
+sys_current_time        0x2000'0014    0x4  Data  Gb  systick.o [1]
+
+
+[1] = D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+  4'368 bytes of readonly  code memory
+    107 bytes of readonly  data memory
+  2'091 bytes of readwrite data memory (+ 500 absolute)
+
+Errors: none
+Warnings: none

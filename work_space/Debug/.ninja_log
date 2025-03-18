@@ -1,0 +1,21 @@
+# ninja log v5
+0	372	7418317628105037	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Obj/hi_18111645973156957597.dir/main.o	dd3ff43478ad4c69
+0	75	7418317939411679	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Obj/hi_18111645973156957597.dir/main.o	dd3ff43478ad4c69
+1	324	7418324267854216	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Obj/hi_18111645973156957597.dir/main.o	dd3ff43478ad4c69
+0	84	7418324560525979	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Obj/hi_18111645973156957597.dir/main.o	dd3ff43478ad4c69
+0	86	7418325639430083	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Obj/hi_18111645973156957597.dir/main.o	dd3ff43478ad4c69
+0	44	7418325877539118	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Exe/gpio.out	b6f7e8e6e8cbe1d2
+66	148	7418326216632217	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Obj/hi_18111645973156957597.dir/main.o	dd3ff43478ad4c69
+150	182	7418326216997140	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Exe/gpio.out	b6f7e8e6e8cbe1d2
+1	90	7418327164059615	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Obj/hi_18111645973156957597.dir/main.o	dd3ff43478ad4c69
+91	125	7418327164431842	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Exe/gpio.out	b6f7e8e6e8cbe1d2
+1	195	7418327619684244	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Obj/hi_18111645973156957597.dir/main.o	dd3ff43478ad4c69
+197	230	7418327620102381	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Exe/gpio.out	b6f7e8e6e8cbe1d2
+2	94	7418328457151120	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Obj/hi_18111645973156957597.dir/main.o	dd3ff43478ad4c69
+95	128	7418328457533080	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Exe/gpio.out	b6f7e8e6e8cbe1d2
+1	89	7418332862106871	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Obj/hi_18111645973156957597.dir/main.o	dd3ff43478ad4c69
+90	125	7418332862493900	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Exe/gpio.out	b6f7e8e6e8cbe1d2
+1	86	7418333160699065	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Obj/hi_18111645973156957597.dir/main.o	dd3ff43478ad4c69
+88	120	7418333161069922	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Exe/gpio.out	b6f7e8e6e8cbe1d2
+1	90	7418333713676927	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Obj/hi_18111645973156957597.dir/main.o	dd3ff43478ad4c69
+92	124	7418333714035423	D:/My_Embedded/Micontroller/Stm32f10x/work_space/Debug/Exe/gpio.out	b6f7e8e6e8cbe1d2

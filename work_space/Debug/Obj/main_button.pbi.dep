@@ -1,0 +1,5 @@
+main_button.pbi: D:\My_Embedded\Micontroller\Stm32f10x\include\define.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\rcc.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\my_rcc.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\include\gpio.h \
+  D:\My_Embedded\Micontroller\Stm32f10x\test_lib\main_button.c

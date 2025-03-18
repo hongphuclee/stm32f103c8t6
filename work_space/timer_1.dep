@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>4</fileVersion>
+    <fileChecksum>1145584470</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\main_timer1.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_stm32f103cx.o</file>
+            <file>$PROJ_DIR$\Debug\Exe\timer_1.out</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
+            <file>$PROJ_DIR$\..\include\timer1.h</file>
+            <file>$PROJ_DIR$\..\test_lib\main_timer1.c</file>
+            <file>$PROJ_DIR$\..\include\bit.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\timer_1.pbd</file>
+            <file>$PROJ_DIR$\..\include\startup_stm32f103cx.s</file>
+            <file>$PROJ_DIR$\Debug\Obj\main_timer1.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\..\include\my_rcc.h</file>
+            <file>$PROJ_DIR$\..\include\LHP_stm32f103.h</file>
+            <file>$PROJ_DIR$\..\include\uart.h</file>
+            <file>$PROJ_DIR$\..\include\i2c.h</file>
+            <file>$PROJ_DIR$\..\include\gpio.h</file>
+            <file>$PROJ_DIR$\..\include\systick.h</file>
+            <file>$PROJ_DIR$\..\include\lcd_i2c.h</file>
+            <file>$PROJ_DIR$\..\include\my_dma.h</file>
+            <file>$PROJ_DIR$\..\include\nvic.h</file>
+            <file>$PROJ_DIR$\..\include\button.h</file>
+            <file>$PROJ_DIR$\..\source\gpio.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\gpio.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\gpio.o</file>
+            <file>$PROJ_DIR$\..\test_lib\main.c</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\main_timer1.o</file>
+            <file>$TOOLKIT_DIR$\config\linker\ST\stm32f103x8.icf</file>
+            <file>$PROJ_DIR$\Debug\List\timer_1.map</file>
+            <file>$PROJ_DIR$\..\include\my_rcc1.h</file>
+            <file>$PROJ_DIR$\..\source\Timer1.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\Timer1.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Timer1.xcl</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\timer_1.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 29</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 28 24 27 2 32 11 26 4 0</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\test_lib\main_timer1.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 27</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 10</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 1</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 13 16 12 21 7 19 20 17 5 14 15 18</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\include\startup_stm32f103cx.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 2</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 3 29</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 24</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 23</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\Timer1.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 32</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 33</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 5 13 16 12 21 7 19 20 17 14 15 18</file>
+                </tool>
+            </inputs>
+        </file>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>

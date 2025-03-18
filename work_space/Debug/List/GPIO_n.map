@@ -1,0 +1,215 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.1.212/W32 for ARM                  28/Oct/2024  18:15:02
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Exe\GPIO_n.out
+#    Map file     =
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\List\GPIO_n.map
+#    Command line =
+#        -f C:\Users\ADMIN\AppData\Local\Temp\EW479E.tmp
+#        (D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\gpio.o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj\main.o
+#        --no_out_extension -o
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Exe\GPIO_n.out
+#        --map
+#        D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\List\GPIO_n.map
+#        --config D:\D\App\IAR\arm\config\linker\ST\stm32f103x8.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'ffff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'4fff] {
+          rw, block CSTACK, block HEAP };
+
+No sections matched the following patterns:
+
+  rw  in "P2"
+
+
+  Section   Kind          Address   Size  Object
+  -------   ----          -------   ----  ------
+"A0":                               0x40
+  .intvec   ro code    0x800'0000   0x40  vector_table_M.o [3]
+                     - 0x800'0040   0x40
+
+"P1":                              0x100
+  .text     ro code    0x800'0040   0x66  gpio.o [1]
+  .text     ro code    0x800'00a6    0x2  vector_table_M.o [3]
+  .text     ro code    0x800'00a8   0x44  main.o [1]
+  .text     ro code    0x800'00ec   0x1e  cmain.o [3]
+  .text     ro code    0x800'010a    0x4  low_level_init.o [2]
+  .text     ro code    0x800'010e    0x4  exit.o [2]
+  .text     ro code    0x800'0114    0xa  cexit.o [3]
+  .text     ro code    0x800'0120   0x14  exit.o [4]
+  .text     ro code    0x800'0134    0xc  cstartup_M.o [3]
+                     - 0x800'0140  0x100
+
+"P2":                              0x800
+  CSTACK              0x2000'0000  0x800  <Block>
+    CSTACK  uninit    0x2000'0000  0x800  <Block tail>
+                    - 0x2000'0800  0x800
+
+Absolute sections, part 1 of 10:    0x1c
+  .noinit   uninit    0x4000'4400   0x1c  main.o [1]
+                    - 0x4000'441c   0x1c
+
+Absolute sections, part 2 of 10:    0x1c
+  .noinit   uninit    0x4001'0800   0x1c  main.o [1]
+                    - 0x4001'081c   0x1c
+
+Absolute sections, part 3 of 10:    0x1c
+  .noinit   uninit    0x4001'0c00   0x1c  main.o [1]
+                    - 0x4001'0c1c   0x1c
+
+Absolute sections, part 4 of 10:    0x1c
+  .noinit   uninit    0x4001'1000   0x1c  main.o [1]
+                    - 0x4001'101c   0x1c
+
+Absolute sections, part 5 of 10:    0x58
+  .noinit   uninit    0x4001'2c00   0x58  main.o [1]
+                    - 0x4001'2c58   0x58
+
+Absolute sections, part 6 of 10:    0x1c
+  .noinit   uninit    0x4001'3800   0x1c  main.o [1]
+                    - 0x4001'381c   0x1c
+
+Absolute sections, part 7 of 10:    0x78
+  .noinit   uninit    0x4002'0000   0x78  main.o [1]
+                    - 0x4002'0078   0x78
+
+Absolute sections, part 8 of 10:    0x30
+  .noinit   uninit    0x4002'1000   0x30  main.o [1]
+                    - 0x4002'1030   0x30
+
+Absolute sections, part 9 of 10:    0x10
+  .noinit   uninit    0xe000'e010   0x10  main.o [1]
+                    - 0xe000'e020   0x10
+
+Absolute sections, part 10 of 10:    0xc
+  .noinit   uninit    0xe000'e100    0xc  main.o [1]
+                    - 0xe000'e10c    0xc
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'0140   0x800'ffff  0xfec0
+  0x2000'0800  0x2000'4fff  0x4800
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  rw data  rw data
+                                         (abs)
+    ------            -------  -------  -------
+command line/config:
+    -------------------------------------------
+    Total:
+
+D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj: [1]
+    gpio.o                102
+    main.o                 68               424
+    -------------------------------------------
+    Total:                170               424
+
+dl7M_tln.a: [2]
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                  8
+
+rt7M_tl.a: [3]
+    cexit.o                10
+    cmain.o                30
+    cstartup_M.o           12
+    vector_table_M.o       66
+    -------------------------------------------
+    Total:                118
+
+shb_l.a: [4]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    4
+    Linker created               2'048
+-----------------------------------------------
+    Grand Total:          320    2'048      424
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                     Address  Size  Type      Object
+-----                     -------  ----  ----      ------
+?main                  0x800'00ed        Code  Gb  cmain.o [3]
+CSTACK$$Base          0x2000'0000         --   Gb  - Linker created -
+CSTACK$$Limit         0x2000'0800         --   Gb  - Linker created -
+DMA1                  0x4002'0000  0x78  Data  Gb  main.o [1]
+GPIOA                 0x4001'0800  0x1c  Data  Gb  main.o [1]
+GPIOB                 0x4001'0c00  0x1c  Data  Gb  main.o [1]
+GPIOC                 0x4001'1000  0x1c  Data  Gb  main.o [1]
+GPIO_Mode              0x800'0041  0x66  Code  Gb  gpio.o [1]
+NVIC                  0xe000'e100   0xc  Data  Gb  main.o [1]
+RCC                   0x4002'1000  0x30  Data  Gb  main.o [1]
+Region$$Table$$Base           0x0         --   Gb  - Linker created -
+Region$$Table$$Limit          0x0         --   Gb  - Linker created -
+STK                   0xe000'e010  0x10  Data  Gb  main.o [1]
+Timer1                0x4001'2c00  0x58  Data  Gb  main.o [1]
+UART1                 0x4001'3800  0x1c  Data  Gb  main.o [1]
+UART2                 0x4000'4400  0x1c  Data  Gb  main.o [1]
+__cmain                0x800'00ed        Code  Gb  cmain.o [3]
+__exit                 0x800'0121  0x14  Code  Gb  exit.o [4]
+__iar_program_start    0x800'0135        Code  Gb  cstartup_M.o [3]
+__low_level_init       0x800'010b   0x4  Code  Gb  low_level_init.o [2]
+__vector_table         0x800'0000        Data  Gb  vector_table_M.o [3]
+_call_main             0x800'00f9        Code  Gb  cmain.o [3]
+_exit                  0x800'0115        Code  Gb  cexit.o [3]
+_main                  0x800'0107        Code  Gb  cmain.o [3]
+exit                   0x800'010f   0x4  Code  Gb  exit.o [2]
+main                   0x800'00a9  0x44  Code  Gb  main.o [1]
+
+
+[1] = D:\My_Embedded\Micontroller\Stm32f10x\work_space\Debug\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+    320 bytes of readonly  code memory
+  2'048 bytes of readwrite data memory (+ 424 absolute)
+
+Errors: none
+Warnings: none
