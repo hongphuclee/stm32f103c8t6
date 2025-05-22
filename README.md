@@ -4,7 +4,6 @@ This is a self-written library for the **STM32F103C8T6** microcontroller, develo
 It simplifies programming and controlling basic peripherals.
 
 ## Supported Features
-https://github.com/hongphuclee/stm32f103c8t6/tree/master
 - **GPIO**: Configure and control input/output pins, toggle LEDs, read buttons, etc.
 - **UART**: Send/receive data via UART for debugging or device communication.
 - **I2C**: Basic I2C communication, supports sensors, LCDs, etc.
